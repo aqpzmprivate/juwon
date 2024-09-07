@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주원이 생일 선물</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffccff, #99ccff);
+            font-family: 'Noto Sans KR', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            text-shadow: 2px 2px 5px #ff00ff;
+        }
+
+        .gift-box {
+            width: 150px;
+            height: 150px;
+            background-color: #ff6699;
+            position: relative;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.1);
+        }
+
+        .ribbon {
+            position: absolute;
+            background-color: #ffcc00;
+        }
+
+        .ribbon.vertical {
+            width: 20px;
+            height: 150px;
+            left: 65px;
+        }
+
+        .ribbon.horizontal {
+            width: 150px;
+            height: 20px;
+            top: 65px;
+        }
+
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0066;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>주원이의 생일을 축하합니다!</h1>
+    <div class="gift-box" onclick="showMessage()">
+        <div class="ribbon vertical"></div>
+        <div class="ribbon horizontal"></div>
+    </div>
+    <div class="message" id="message">히맨 아저씨 뿡빵띠 생일 축하합니다! 🎉🎁</div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
